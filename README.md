@@ -1,6 +1,6 @@
 # LVGL Qt Simulator
 
-一个基于 **Qt 5.15.2 + LVGL** 的桌面模拟器工程，用于在 PC（Windows）环境下快速开发、调试和验证嵌入式 LVGL UI。
+一个基于 **Qt 5.XX + LVGL** 的桌面模拟器工程，用于在 PC（Windows）环境下快速开发、调试和验证嵌入式 LVGL UI。
 
 该项目的目标是：
 - **在不依赖真实硬件的情况下** 调试 LVGL 界面逻辑
