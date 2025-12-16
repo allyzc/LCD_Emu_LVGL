@@ -55,37 +55,12 @@
 
 ---
 
-## 📦 目录结构（Directory Layout）
-
-```
-.
-├─ app/                    # 应用层（你的 UI / 业务代码）
-│  └─ ui/
-├─ lvgl/                   # LVGL 源码（官方仓库）
-│  ├─ src/
-│  └─ lv_conf.h
-├─ port/                   # 平台适配层（PC / Qt）
-│  ├─ display_port.cpp     # 显示接口适配
-│  ├─ touch_port.cpp       # 触摸接口适配
-│  └─ tick_port.cpp        # LVGL Tick 适配
-├─ qt/                     # Qt 相关代码
-│  ├─ LcdEmulatorWidget.*
-│  └─ mainwindow.*
-├─ main.cpp
-├─ *.pro
-└─ README.md
-```
-
-> 💡 `port/` 目录的职责与嵌入式中的 `bsp / drv` 层一致，用于隔离平台差异。
-
----
-
 ## 🛠 构建环境（Build Environment）
 
 - 操作系统：Windows 10 / 11
 - Qt：**Qt 5.15.2**
-- 编译器：MinGW 64-bit
-- LVGL：v8.x（可自行替换）
+- 编译器：MinGW
+- LVGL：v9.x（可自行替换）
 
 > ⚠️ 目前未验证 MSVC，如需支持可自行调整 `.pro` 配置。
 
@@ -112,20 +87,6 @@
 - 鼠标移动：模拟触摸滑动（如启用）
 
 > 输入事件通过 `touch_port` 转换为 LVGL 的 `lv_indev` 接口。
-
----
-
-## 🧪 调试建议（Debug Tips）
-
-- 建议在 **Debug 模式** 下运行
-- 可在 `lv_conf.h` 中打开：
-  ```c
-  #define LV_USE_LOG 1
-  #define LV_LOG_LEVEL LV_LOG_LEVEL_INFO
-  ```
-- Qt Creator 可直接：
-  - 单步调试 LVGL 内部逻辑
-  - 实时查看 Framebuffer 数据
 
 ---
 
