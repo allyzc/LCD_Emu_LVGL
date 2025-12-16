@@ -58,7 +58,7 @@
 ## 🛠 构建环境（Build Environment）
 
 - 操作系统：Windows 10 / 11
-- Qt：**Qt 5.15.2**
+- Qt：**Qt 5.XX**
 - 编译器：MinGW
 - LVGL：v9.x（可自行替换）
 
